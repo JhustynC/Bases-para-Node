@@ -32,22 +32,25 @@
 
 //! Repaso sobre callbacks
 
-import {getPokemonByID} from './js-foundation/06-promises';
+// import {getPokemonByID} from './js-foundation/06-promises';
 
-const info = getPokemonByID(4)
-    .then(( pokemon ) => console.log({ pokemon }))
-    .catch(( err ) => console.error(err)
-);
+// const info = getPokemonByID(4)
+//     .then(( pokemon ) => console.log({ pokemon }))
+//     .catch(( err ) => console.error(err)
+// );
 
-// console.log(info);
+// // console.log(info);
 
-// //! Consumir modulo de loggers (winston)
+//! Consumir modulo de loggers (winston)
 
-// const { buildLogger } = require('./plugins')
+// // const { buildLogger } = require('./plugins')
 
-import { buildLogger } from "./plugins/logger.plugin";
+// import { buildLogger } from "./plugins/logger.plugin";
 
-const logger = buildLogger('app.js');
+// const logger = buildLogger('app.js');
 
-logger.log('Hola Mundo');
-logger.error('Algo malo');
+// logger.log('Hola Mundo');
+// logger.error('Algo malo');
+
+
+
