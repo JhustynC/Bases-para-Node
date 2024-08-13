@@ -1,21 +1,21 @@
-import { getUUID } from '../plugins/get-id.plugin';
-import get from 'axios';
-import { getAge } from '../plugins/get-age.plugin';
+import { getUUID } from "../plugins/get-id.plugin";
+import get from "axios";
+import { getAge } from "../plugins/get-age.plugin";
 
 // const { getAge, getUUID } = require('../plugins/index.js');
 
 export interface BuilMakePersonOptions {
-    getUUID: () => string,
-    getAge: (birthday: string) => number
+  getUUID: () => string;
+  getAge: (birthday: string) => number;
 }
 
 export interface PersonOptions {
-    name: string,
-    birthday: string
+  name: string;
+  birthday: string;
 }
 
 export const buildMakePerson = ({ getUUID, getAge }: BuilMakePersonOptions) => {
-    return ({ name, birthday } : PersonOptions) => {
+  return ({ name, birthday }: PersonOptions) => {
     return {
       id: getUUID(),
       name: name,
@@ -29,4 +29,3 @@ export const buildMakePerson = ({ getUUID, getAge }: BuilMakePersonOptions) => {
 // const buildPerson = buildMakePerson();
 // const karen = buildPerson(obj);
 // console.log(karen);
-
