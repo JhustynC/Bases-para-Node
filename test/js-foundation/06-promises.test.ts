@@ -1,4 +1,3 @@
-import { log } from "console";
 import { getPokemonByID } from "./../../src/js-foundation/06-promises";
 
 describe("js-foundation/06-promises", () => {

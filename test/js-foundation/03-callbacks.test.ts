@@ -1,5 +1,4 @@
 import { getUserByID } from "./../../src/js-foundation/03-callbacks";
-import { User } from "../../src/js-foundation/03-callbacks";
 
 describe("js-foundation/03-callbacks.ts", () => {
   test("getUserById should return an error if user does not exits", (done: jest.DoneCallback) => {

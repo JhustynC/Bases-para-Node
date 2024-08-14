@@ -10,3 +10,4 @@ describe("js-foundation/01-template.ts", () => {
     expect(emailTemplate).toContain("{{orderId}}");
   });
 });
+
