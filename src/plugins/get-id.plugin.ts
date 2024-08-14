@@ -1,6 +1,5 @@
-
-import { v4 } from 'uuid';
+import { v4 as uuid } from 'uuid';
 
 export const getUUID = () => {
-    return v4();
+    return uuid();
 }

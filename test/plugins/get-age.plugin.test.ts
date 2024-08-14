@@ -17,4 +17,16 @@ describe("plugins/get-age.plugins.ts", () => {
 
     expect(age).toBe(caculateAge);
   });
+
+  test("getAge shoul return 0 years", () => {
+    //Aqui es donde hacemos el mock del valor de retorno de una funcion para controlar el test
+    const spy = jest.spyOn(Date.prototype, "getFullYear").mockReturnValue(1995);
+
+    const birthdate = "1995-10-21";
+    const age = getAge(birthdate);
+    // console.log("This is the age:", age);
+
+    expect(age).toBe(0);
+    // console.log(spy);
+  });
 });
