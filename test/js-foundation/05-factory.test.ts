@@ -1,6 +1,8 @@
 import { buildMakePerson } from "./../../src/js-foundation/05-factory";
 
 describe("js-foundation/05-factory.ts", () => {
+  
+  //Mock of parameter functions
   const getUUID = () => "1234";
   const getAge = () => 35;
 
