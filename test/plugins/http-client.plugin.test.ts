@@ -1,8 +1,30 @@
+import { hash } from "crypto";
 import { http } from "./../../src/plugins/http-client.plugin";
 
 describe("http-client.plugin", () => {
   const pokemonId = 1;
   const url = `https://pokeapi.co/api/v2/pokemon/${pokemonId}`;
+
+  test("http() should return a string", async () => {
+    const data = await http.get("https://jsonplaceholder.typicode.com/todos/1");
+    expect(data).toEqual({
+      userId: 1,
+      id: 1,
+      title: "delectus aut autem",
+      completed: expect.any(Boolean),
+    });
+  });
+
+  test("http() shuold have POST, PUT, and DELETE methods", () => {
+    expect(http).toHaveProperty("put");
+    expect(typeof http.put).toBe("function");
+    
+    expect(http).toHaveProperty("post");
+    expect(typeof http.post).toBe("function");
+
+    expect(http).toHaveProperty("delete");
+    expect(typeof http.delete).toBe("function");
+  })
 
   test("http() should not return a undefined", async () => {
     const response = await http.get(url);
